@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+
+:root {
+    --color-dark: #000000;
+    --color-light: #f9faf8;
+    --secondary-color: #E5E7EB;
+    --action-color: #436850;
+  }
+
+.hero-section{
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    padding: 0px 15%;
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    position: relative;
+}
+
+.hamburger{
+    display: none; 
+    position:sticky;
+    right: 75px;
+}
+
+.hamburger input[type="checkbox"] {
+    display: none;
+}
+
+.hamburger img{
+    width: 32px;
+    height: 32px;
+    filter: invert(1) brightness(2);
+}
+
+.close-menu{
+    display: none; 
+    position:fixed;
+    right: 75px;
+    z-index: 5;
+}
+
+.close-menu img{
+    width: 24px;
+    height: 24px;
+    filter: invert(1) brightness(2);
+}
+
+.navlinks ul{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    list-style: none;
+}
+.navlink{
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.logo{
+    font-size: 24px;
+}
+
+.hero{
+    padding: 100px 0px;
+    width:100%;
+    min-height: 75vh;
+    display: flex;
+    gap: 40px;
+}
+
+.hero-text{
+    font-size: 48px;
+    color: var(--color-light);
+}
+
+.hero-left{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.image-holder{
+    background-color: grey;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 220px;
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.signup-btn{
+    text-decoration: none;
+    color: var(--color-light);
+    background-color: var(--action-color);
+    padding: 5px 30px;
+    align-self: baseline;
+    border-radius: 8px;
+}
+.signup-btn:hover{
+    color: var(--action-color);
+    background-color: var(--color-light);
+}
+
+.information{
+    padding-top: 40px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    color: var(--color-dark);
+}
+
+.information h1{
+    font-size: 36px;
+    color: var(--color-dark);
+}
+.cards-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 30px;
+}
+.card{
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.a-link{
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.a-link:hover{
+    color: var(--action-color);
+}
+
+.img-card{
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/*Quote section*/
+.quote{
+    background-color: var(--secondary-color);
+    color: var(--color-dark);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 0px;
+}
+
+.quote-box{
+    width: 50%;
+}
+
+.quote-owner{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    color: var(--color-dark);
+}
+
+.quote-msg{
+    font-size: 36px;
+}
+
+.call-to-action{
+    background-color: var(--action-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0px;
+    color: var(--color-light);
+    gap: 100px;
+    width: 70%;
+    padding: 50px 0px;
+    border-radius: 8px;
+}
+
+.action-btn{
+    border: solid 2px var(--color-light);
+    padding: 5px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--color-light);  
+}
+
+.action-btn:hover{
+    background-color: var(--color-light);
+    color: var(--action-color);
+
+}
+.action-left{
+    flex-grow: 2/3;
+}
+.action-right{
+    flex-grow: 1/3;
+}
+.action-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0px;
+}
+
+.footer-section{
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.menu-toggle:checked ~ .navlinks{
+    display: none;
+}
+
+@media (max-width: 850px) {
+    .hero{
+        flex-direction: column;
+    }
+    .image-holder{
+        width: 100%;
+        overflow: hidden;
+        height: 250px;
+    }
+    .hero-left{
+        width: 100%;
+    }
+    .information{
+        padding: 40px 20px;
+    }
+    .cards-list{
+        flex-wrap: wrap;
+    }
+    .quote-box{
+        width: 80%;
+    }
+    .call-to-action{
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 40px;
+        gap: 20px;   
+     }
+    .action-section{
+        justify-content: center;
+        align-items: center;
+    }
+    .hamburger {
+        z-index: 2;
+        display: block;
+    }
+
+    .navlinks {
+        padding-top: 50px;
+        display: block;
+        opacity: 0;
+        position: fixed;
+        text-align: center;
+        top: 0;
+        right: 0;
+        width: 60%;
+        height: 100vh;
+        background: #436850;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1;
+    }
+
+    .navlinks.open {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .navlinks ul{
+        display: block;
+    }
+    .a-link:hover{
+        color:black;
+    }
+
+    .hamburger img {
+        width: 32px;
+        height: 32px;
+        filter: invert(1) brightness(2);
+    }
+
+    .hamburger:hover{
+        cursor: pointer;
+    }
+    .close-menu:hover{
+        cursor: pointer;
+    }
+
+    .navlinks ul {
+        list-style: none;
+        padding: 20px;
+    }
+
+    .navlinks ul li {
+        margin: 20px 0;
+    }
+
+    .navlinks ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+}
