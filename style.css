@@ -30,7 +30,7 @@ nav{
 .hamburger{
     display: none; 
     position:sticky;
-    right: 75px;
+    right: 40px;
 }
 
 .hamburger input[type="checkbox"] {
@@ -46,7 +46,7 @@ nav{
 .close-menu{
     display: none; 
     position:fixed;
-    right: 75px;
+    right: 40px;
     z-index: 5;
 }
 
@@ -250,6 +250,9 @@ nav{
 @media (max-width: 850px) {
     .hero{
         flex-direction: column;
+    }
+    .hero-section{
+        padding: 0px 30px;
     }
     .image-holder{
         width: 100%;
